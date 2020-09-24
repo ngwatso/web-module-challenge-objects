@@ -43,7 +43,9 @@ burger.discount = function(string) {
 };
 
 // console.log(burger)
+
 console.log(burger.discount("teacher"))
+
 ///////////////Reviews (MVP)///////////////////
 
 const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
@@ -65,7 +67,12 @@ console.log(reviews[5].feedback)
 reviews.push(newReview = {"name": "Nick", "rating": 5, "feedback": "The lasagna was amazing!  I saw a big fat orange cat enjoying a plate right next to me, he seemed to think it was pretty good as well."});
 
 console.log(reviews[8])
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+
+console.log(reviews[7].feedback)
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -79,10 +86,13 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
-function getReviewByIndex(reviews, index) {
-    /* code here */
+
+function getReviewByIndex(array, index) {
+    
+    console.log(`${array[index].name} gave the restaurant a ${array[index].rating}, and their feedback was: ${array[index].feedback}`)
   }
   
+getReviewByIndex(reviews, 8)
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
