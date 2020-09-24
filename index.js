@@ -64,13 +64,13 @@ console.log(reviews[5].feedback)
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
-reviews.push(newReview = {"name": "Nick", "rating": 5, "feedback": "The lasagna was amazing!  I saw a big fat orange cat enjoying a plate right next to me, he seemed to think it was pretty good as well."});
+reviews.unshift(newReview = {"name": "Nick", "rating": 5, "feedback": "The lasagna was amazing!  I saw a big fat orange cat enjoying a plate right next to me, he seemed to think it was pretty good as well."});
 
-console.log(reviews[8])
+console.log(reviews[0])
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
 
-reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+reviews[8].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
 
 console.log(reviews[7].feedback)
 
@@ -92,7 +92,7 @@ function getReviewByIndex(array, index) {
     console.log(`${array[index].name} gave the restaurant a ${array[index].rating}, and their feedback was: ${array[index].feedback}`)
   }
   
-getReviewByIndex(reviews, 8)
+getReviewByIndex(reviews, 3)
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
@@ -103,11 +103,12 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
+function getLastReview(array) {
+
+    console.log(`${array[array.length - 1].name} gave the restaurant a ${array[array.length - 1].rating}, and their feedback was ${array[array.length - 1].feedback}`);
   } 
 
-
+getLastReview(reviews);
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
 /** STRETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should accept: 
