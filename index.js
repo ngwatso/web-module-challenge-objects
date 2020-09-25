@@ -193,22 +193,24 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-// function getLongReviews(array) {
-//   const reviewList2 = [];
-//   let wordCount = 0;
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i].feedback === " ") {
-//       console.log(array[i].feedback);
-//       wordCount = +1;
-//       console.log(wordCount);
-//     }
-//     if (wordCount >= 15) {
-//       reviewList2.push(array[i]); // Split Method
-//     }
-//   }
-//   console.log(reviewList2);
-// }
-// getLongReviews(reviews);
+
+// let sentence = "Hi I am Nick how are you today?"
+
+// console.log(sentence.split(" "));
+
+function getLongestReview(array) {
+  const reviewList2 = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].feedback.split(" ").length >= 15) {
+      reviewList2.push(array[i]);
+    }
+  }
+  console.log(reviewList2);
+}
+
+getLongestReview(reviews);
+
 /* STRETCH 3:  This challenge is not related to the data above! 
 
 Write a function called carMarker 
